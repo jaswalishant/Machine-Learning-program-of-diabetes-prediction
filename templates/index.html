@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="prediction" method="POST">
+                {% csrf_token %}
+                <label>Pregnancies : </label>
+                <input type="text", name="pregnancies" required=required>
+                <label>Glucose : </label>
+                <input type="text", name="glucose" required=required>
+                <label>Blood Pressure : </label>
+                <input type="text", name="bp" required=required>
+                <label>Skin Tickness : </label>
+                <input type="text", name="skin_thickness" required=required>
+                <label>Insulin : </label>
+                <input type="text", name="insulin" required=required>
+                <label>BMI : </label>
+                <input type="text", name="BMI" required=required>
+                <label>Diabetes Pedigree Function: </label>
+                <input type="text", name="dpf" required=required>
+                <label>Age : </label>
+                <input type="text", name="age" required=required>
+                <button type="submit" class="btn">Predict</button>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
